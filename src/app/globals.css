@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* ============================================================
+   AI Neutral News - Black & White Edition
+   완벽한 블랙 앤 화이트 미니멀리즘, 다크모드 대응
+   ============================================================ */
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #737373;
+  --border: #e5e5e5;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --primary: #0a0a0a;
+  --primary-foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+    --muted: #a3a3a3;
+    --border: #262626;
+    --card: #171717;
+    --card-foreground: #fafafa;
+    --primary: #fafafa;
+    --primary-foreground: #0a0a0a;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-noto-serif);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* 본문/기사용 Serif 가독성 */
+.font-article {
+  font-family: var(--font-serif), "Noto Serif KR", Georgia, serif;
+}
